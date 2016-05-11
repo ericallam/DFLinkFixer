@@ -1,0 +1,64 @@
+AllCops:
+  TargetRubyVersion: 2.3
+
+Metrics/AbcSize:
+  Max: 28
+
+Lint/AmbiguousOperator:
+  Enabled: false
+
+Metrics/ClassLength:
+  Max: 800
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 24
+
+Style/AlignParameters:
+  Enabled: false
+
+Style/AlignHash:
+  Enabled: false # for methods with keyword arguments with one on first line
+
+Style/BlockDelimiters:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/EachWithObject:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - 'db/**/*.rb'
+
+Style/MethodDefParentheses:
+  Enabled: true
+
+Style/MultilineBlockChain:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Style/PredicateName:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/TrailingCommaInArguments:
+  Enabled: false
+
+Style/TrailingCommaInLiteral:
+  Enabled: false

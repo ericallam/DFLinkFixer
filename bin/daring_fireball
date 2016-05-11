@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler'
+Bundler.setup
+require 'slop'
+require 'pry'
+
+require_relative '../daring_fireball'
+
+options = Slop.parse do |o|
+  o.string '-o', '--output', "Select the output format. Defaults to stdout"
+  o.string '-u', '--url', "Specify a single linked list url to output"
+  o.string '-a', '--archive', "Specifiy a month/year archive page to output"
+  o.on '--version', 'print the version' do
+    puts DaringFireball::VERSION
+    exit
+  end
+  o.on '--help', 'print help' do
+    puts o
+    exit
+  end
+end
+
+# Examples:
+command = DaringFireball::Command.new options.to_h
+command.perform!
